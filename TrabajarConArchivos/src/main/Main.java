@@ -58,12 +58,12 @@ public class Main {
 		// Ficheros d3
 		File d31 = new File(d3, "d31");
 		d31.mkdir();
-		
+
 		listarExtension(d, "txt");
 		listarExtension2(d, "txt");
-//		borrarExtension(d1, "txt");
+		//		borrarExtension(d1, "txt");
 	}
-	
+
 	/**
 	 * EJ 2 y 3
 	 * Lista recursivamente todos los directorios y ficheros de un directorio
@@ -71,27 +71,27 @@ public class Main {
 	 * @param carp 	- el directorio a listar
 	 */
 	public static void listarRecursivo(File carp) {
-        File[] carpetas = carp.listFiles();
-        // Si y solo si hay algún fichero en el directorio, entra al bucle
-        if(carpetas != null) {
-        	// Recorre todos los directorios y archivos de carp (solo primer nivel)
-            for (File x : carpetas) {
-            	// Imprime el nombre del primer nivel de archivos
-                System.out.println(x.getName());
-                /*Si en el primer nivel encuentra un directorio, tras imprimir su
+		File[] carpetas = carp.listFiles();
+		// Si y solo si hay algún fichero en el directorio, entra al bucle
+		if(carpetas != null) {
+			// Recorre todos los directorios y archivos de carp (solo primer nivel)
+			for (File x : carpetas) {
+				// Imprime el nombre del primer nivel de archivos
+				System.out.println(x.getName());
+				/*Si en el primer nivel encuentra un directorio, tras imprimir su
                 nombre llama de nuevo al propio método con un nuevo argumento
                 (recursividad). El nuevo argumento es el propio directorio nuevo.
                 Esto se repite para todos los nuevos directorios que vaya 
                 encontrando, acumulándose las llamadas al método en el stack.
                 Java sin embargo no está preparado para algoritmos recursivos,
                 y esto puede llevar a ese error tan común, StackOverflow.*/
-                if (x.isDirectory()) {
-                	listarRecursivo(x);
-                }
-            }
-        }
-    }
-	
+				if (x.isDirectory()) {
+					listarRecursivo(x);
+				}
+			}
+		}
+	}
+
 	/**
 	 * EJ 4
 	 * Lista recursivamente todos los directorios y los archivos con una extensión elegida que
@@ -102,23 +102,23 @@ public class Main {
 	 * @param ext 	- la extensión única a listar
 	 */
 	public static void listarExtension(File carp, String ext) {
-        File[] carpetas = carp.listFiles();
-        String extension;
-        if(carpetas != null) {
-            for (File x : carpetas) {
-            	// Si es un fichero CON EXTENSIÓN, y no más de 4 caracteres para dicha extensión:
-                if(x.getName().contains("." + ext) && (x.getName().lastIndexOf("." + ext) >= x.getName().length() - 5)) {
-                    System.out.println(x.getName());
-                }
-                // Si es un directorio y, por tanto, se debe volver a listar:
-                if(x.isDirectory()) {
-                	System.out.println(x.getName());
-                	listarExtension(x, ext);
-                }
-            }
-        }
+		File[] carpetas = carp.listFiles();
+		String extension;
+		if(carpetas != null) {
+			for (File x : carpetas) {
+				// Si es un fichero CON EXTENSIÓN, y no más de 4 caracteres para dicha extensión:
+				if(x.getName().contains("." + ext) && (x.getName().lastIndexOf("." + ext) >= x.getName().length() - 5)) {
+					System.out.println(x.getName());
+				}
+				// Si es un directorio y, por tanto, se debe volver a listar:
+				if(x.isDirectory()) {
+					System.out.println(x.getName());
+					listarExtension(x, ext);
+				}
+			}
+		}
 	}
-	
+
 	/**
 	 * EJ 4 
 	 * Uso del método endsWith() para mejorar el ej 4 y hacer que soporte extensiones de más caracteres.
@@ -126,22 +126,22 @@ public class Main {
 	 * @param ext 	- la extensión única a listar
 	 */
 	public static void listarExtension2(File carp, String ext) {
-        File[] carpetas = carp.listFiles();
-        String extension;
-        if(carpetas != null) {
-            for (File x : carpetas) {
-                if(x.getName().endsWith("." + ext)) {
-                    System.out.println(x.getName());
-                }
-                // Si es un directorio y, por tanto, se debe volver a listar:
-                if(x.isDirectory()) {
-                	System.out.println(x.getName());
-                	listarExtension2(x, ext);
-                }
-            }
-        }
+		File[] carpetas = carp.listFiles();
+		String extension;
+		if(carpetas != null) {
+			for (File x : carpetas) {
+				if(x.getName().endsWith("." + ext)) {
+					System.out.println(x.getName());
+				}
+				// Si es un directorio y, por tanto, se debe volver a listar:
+				if(x.isDirectory()) {
+					System.out.println(x.getName());
+					listarExtension2(x, ext);
+				}
+			}
+		}
 	}
-	
+
 	/**
 	 * EJ 5
 	 * Borra los archivos con una extensión determinada en un directorio que se pasará por parámetro.
@@ -151,13 +151,13 @@ public class Main {
 	public static void borrarExtension(File carp, String ext) {
 		File[] carpetas = carp.listFiles();
 		for (File x : carpetas) {
-            if(x.getName().endsWith("." + ext)) {
-                if(x.delete()) {
-                	System.out.println("El archivo " + x.getName() + " se ha borrado con éxito.");
-                } else {
-                	System.out.println("Ha ocurrido un error.");
-                }
-            }		
-        }
+			if(x.getName().endsWith("." + ext)) {
+				if(x.delete()) {
+					System.out.println("El archivo " + x.getName() + " se ha borrado con éxito.");
+				} else {
+					System.out.println("Ha ocurrido un error.");
+				}
+			}		
+		}
 	}
 }
