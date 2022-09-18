@@ -130,7 +130,6 @@ public class Main {
         String extension;
         if(carpetas != null) {
             for (File x : carpetas) {
-            	// Si es un fichero CON EXTENSIÓN, y no más de 4 caracteres para dicha extensión:
                 if(x.getName().endsWith("." + ext)) {
                     System.out.println(x.getName());
                 }
