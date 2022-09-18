@@ -1,0 +1,14 @@
+INDEX VERSION 1.131+/home/lucia/ACD/.metadata/.plugins/org.eclipse.jdt.core
+3646257058.index
+3017704118.index
+646308851.index
+3443014540.index
+1865797976.index
+2456876115.index
+3501204014.index
+1418079453.index
+449874395.index
+36410848.index
+2576334501.index
+2017864114.index
+2368720194.index
