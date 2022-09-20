@@ -59,9 +59,10 @@ public class Main {
 		File d31 = new File(d3, "d31");
 		d31.mkdir();
 
-		listarExtension(d, "txt");
-		listarExtension2(d, "txt");
-		//		borrarExtension(d1, "txt");
+		listarRecursivo(d);
+//		listarExtension(d, "txt");
+//		listarExtension2(d, "txt");
+//		borrarExtension(d1, "txt");
 	}
 
 	/**
@@ -73,11 +74,11 @@ public class Main {
 	public static void listarRecursivo(File carp) {
 		File[] carpetas = carp.listFiles();
 		// Si y solo si hay algún fichero en el directorio, entra al bucle
-		if(carpetas != null) {
+		if(carp.isDirectory() && carpetas != null) {
 			// Recorre todos los directorios y archivos de carp (solo primer nivel)
-			for (File x : carpetas) {
+			for (int i = 0; i < carpetas.length; i++) {
 				// Imprime el nombre del primer nivel de archivos
-				System.out.println(x.getName());
+				System.out.println("  " + carpetas[i].getName());
 				/*Si en el primer nivel encuentra un directorio, tras imprimir su
                 nombre llama de nuevo al propio método con un nuevo argumento
                 (recursividad). El nuevo argumento es el propio directorio nuevo.
@@ -85,12 +86,17 @@ public class Main {
                 encontrando, acumulándose las llamadas al método en el stack.
                 Java sin embargo no está preparado para algoritmos recursivos,
                 y esto puede llevar a ese error tan común, StackOverflow.*/
-				if (x.isDirectory()) {
-					listarRecursivo(x);
+				if(carpetas[i].isDirectory()) {
+					System.out.print("  ");
 				}
+				listarRecursivo(carpetas[i]);
 			}
 		}
 	}
+//	
+//	public static void tabulador(String tab, int) {
+//		System.out.println("  ");
+//	}
 
 	/**
 	 * EJ 4
@@ -103,7 +109,6 @@ public class Main {
 	 */
 	public static void listarExtension(File carp, String ext) {
 		File[] carpetas = carp.listFiles();
-		String extension;
 		if(carpetas != null) {
 			for (File x : carpetas) {
 				// Si es un fichero CON EXTENSIÓN, y no más de 4 caracteres para dicha extensión:
@@ -127,7 +132,6 @@ public class Main {
 	 */
 	public static void listarExtension2(File carp, String ext) {
 		File[] carpetas = carp.listFiles();
-		String extension;
 		if(carpetas != null) {
 			for (File x : carpetas) {
 				if(x.getName().endsWith("." + ext)) {

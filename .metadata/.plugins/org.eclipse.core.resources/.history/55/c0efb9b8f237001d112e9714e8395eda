@@ -1,0 +1,43 @@
+package main;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+/**
+ * Pues eso
+ * @author LuciaLM
+ * @version 1.0
+ */
+public class LecturaEscritura {
+	public static void main(String[] args) {
+		try {
+			leer(new File("/home/lucia/Escritorio/prueba.txt"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void escribir() throws IOException {
+		File f = new File("/home/lucia/Escritorio/prueba.txt");
+		System.out.println(f.exists());
+		f.createNewFile();
+		FileWriter fw = new FileWriter(f);
+		PrintWriter pw = new PrintWriter(fw);
+		pw.println("Línea 1");
+		pw.println("Línea 2");
+		pw.println("Línea 3");
+		pw.close();
+		fw.close();
+	}
+	
+	public static void leer(File f) throws IOException {
+		FileReader fr = new FileReader(f);
+		int caracter = fr.read();
+		while(caracter != -1) {
+			System.out.print(caracter);
+			
+		}
+	}
+}

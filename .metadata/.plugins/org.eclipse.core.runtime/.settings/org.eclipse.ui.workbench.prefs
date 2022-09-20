@@ -26,4 +26,5 @@ org.eclipse.ui.workbench.INACTIVE_TAB_BG_END=49,53,56
 org.eclipse.ui.workbench.INACTIVE_TAB_BG_START=59,64,66
 org.eclipse.ui.workbench.INACTIVE_TAB_TEXT_COLOR=187,187,187
 org.eclipse.wst.sse.ui.textfont=1|Monospace|14.0|0|GTK|1|;
+org.eclipse.xtend.ui.editors.textfont=1|Monospace|14.0|0|GTK|1|;
 terminal.views.view.font.definition=1|Monospace|14.0|0|GTK|1|;
