@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;main.LectraEscrituraFlujosByte&apos; to &apos;LecturaEscrituraFlujosByte&apos;&#x0A;- Original project: &apos;TrabajarConArchivos&apos;&#x0A;- Original element: &apos;main.LectraEscrituraFlujosByte&apos;&#x0A;- Renamed element: &apos;main.LecturaEscrituraFlujosByte&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LectraEscrituraFlujosByte&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;main{LectraEscrituraFlujosByte.java[LectraEscrituraFlujosByte" matchStrategy="1" name="LecturaEscrituraFlujosByte" qualified="false" references="true" similarDeclarations="false" stamp="1664176251468" textual="false" version="1.0"/>
+</session>
