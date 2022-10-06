@@ -1,0 +1,18 @@
+package main;
+
+import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
+
+public class AccesoRandom {
+
+	public static void main(String[] args) {
+		try {
+			RandomAccessFile raf = new RandomAccessFile("datos.dat", "rw");
+			
+			raf.writeInt(69);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

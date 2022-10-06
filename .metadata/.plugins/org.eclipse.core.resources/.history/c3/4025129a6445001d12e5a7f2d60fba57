@@ -1,0 +1,57 @@
+package main;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class AccesoRandomEj1 {
+
+	public static void main(String[] args) {
+		try {
+			File f = new File("/home/lucia/Escritorio/fichero.dat");
+			RandomAccessFile inOut = new RandomAccessFile(f, "rw");
+			String texto;
+			int espacios = 0;
+			
+			// Mueve el puntero a la primera posición y lee un
+			// array de bytes con la longitud del texto.
+	        inOut.seek(0);
+	        byte[] arr = new byte[(int) inOut.length()];
+	        // Lee el texto completamente en el array
+			inOut.readFully(arr);
+			// Vuelve a mover el puntero a primera posición
+	        inOut.seek(0);
+	        // Crea un nuevo texto a partir de ese array
+			texto = new String(arr);
+			
+			for(int i = 0; i < texto.length(); i++) {
+				if (texto.charAt(i) == ' ') {
+					espacios++;
+				}
+			}
+			
+			System.out.println(texto.length());
+			texto = texto.toUpperCase();
+			texto = texto.replace(" ", "");
+			texto  = texto.substring(0, texto.length() - espacios);
+			inOut.seek(0);
+			inOut.writeBytes(texto);
+			
+//			// intenta coger el nuevo array, pero como todavía quedan las letras
+//			// que no se han convertido del otro, sigue teniendo la misma length (576)
+//			inOut.seek(0);
+//			byte[] arrMod = new byte[(int) inOut.length()];
+//			inOut.readFully(arrMod);
+//			System.out.println(arr.length);
+//			
+//			inOut.seek(arr.length - arrMod.length);
+//			for(int i = arrMod.length; i < arr.length; i++) {
+//				inOut.writeChars("w");
+//			}
+			
+			inOut.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

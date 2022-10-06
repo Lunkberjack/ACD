@@ -1,0 +1,28 @@
+package main;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class AccesoRandomEj1 {
+
+	public static void main(String[] args) {
+		try {
+			File f = new File("/home/lucia/Escritorio/fichero.dat");
+			RandomAccessFile inOut = new RandomAccessFile(f, "rw");
+			String texto;
+
+	        inOut.seek(0);
+	        byte[] arr = new byte[(int) inOut.length()];
+	        
+			inOut.readFully(arr);
+	        inOut.seek(0);
+			texto = new String(arr);
+			inOut.writeBytes(texto.toUpperCase().replaceAll(" ", ""));
+			
+			inOut.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

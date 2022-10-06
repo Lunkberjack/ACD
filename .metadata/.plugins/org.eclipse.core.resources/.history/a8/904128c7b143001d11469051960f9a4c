@@ -1,0 +1,19 @@
+package main;
+
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class AccesoRandomEj1 {
+
+	public static void main(String[] args) {
+		try {
+			RandomAccessFile inOut = new RandomAccessFile("/home/lucia/Escritorio/fichero.dat", "rw");
+			String linea;
+			linea = inOut.readLine();
+			
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
