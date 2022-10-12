@@ -24,7 +24,7 @@ public class AccesoRandomEj1 {
 			texto = new String(arr);
 			
 			inOut.seek(0);
-			// Lee cada carácter del texto, lo pasa a String y lo escribe,
+			// Lee cada carácter del texto, lo pasa a String y lo escribe, 
 			// teniendo en cuenta que no sea un espacio. Esto lo hace un nº
 			// de veces igual a la longitud inicial del texto.
 			for(int i = 0; i < texto.length(); i++) {

@@ -59,7 +59,7 @@ public class Main {
 		File d31 = new File(d3, "d31");
 		d31.mkdir();
 
-		listarRecursivo(d);
+		listarRecursivo(d, "\t");
 //		listarExtension(d, "txt");
 //		listarExtension2(d, "txt");
 //		borrarExtension(d1, "txt");
@@ -71,27 +71,18 @@ public class Main {
 	 * especificado.
 	 * @param carp 	- el directorio a listar
 	 */
-	public static void listarRecursivo(File carp) {
+	public static void listarRecursivo(File carp, String sep) {
 		File[] carpetas = carp.listFiles();
 		// Si y solo si hay algún fichero en el directorio, entra al bucle
-		if(carp.isDirectory() && carpetas != null) {
-			// Recorre todos los directorios y archivos de carp (solo primer nivel)
-			for (int i = 0; i < carpetas.length; i++) {
-				// Imprime el nombre del primer nivel de archivos
-				System.out.println("  " + carpetas[i].getName());
-				/*Si en el primer nivel encuentra un directorio, tras imprimir su
-                nombre llama de nuevo al propio método con un nuevo argumento
-                (recursividad). El nuevo argumento es el propio directorio nuevo.
-                Esto se repite para todos los nuevos directorios que vaya 
-                encontrando, acumulándose las llamadas al método en el stack.
-                Java sin embargo no está preparado para algoritmos recursivos,
-                y esto puede llevar a ese error tan común, StackOverflow.*/
-				if(carpetas[i].isDirectory()) {
-					System.out.print("  ");
-				}
-				listarRecursivo(carpetas[i]);
-			}
-		}
+	    if(carpetas != null){
+	        for (int x = 0; x < carpetas.length; x++) {
+	            System.out.println(sep + carpetas[x].getName());
+	            if (carpetas[x].isDirectory()) {
+	                String nuevoSep = sep + " ";
+	                listarRecursivo(carpetas[x], nuevoSep);
+	            }
+	        }
+	    }
 	}
 //	
 //	public static void tabulador(String tab, int) {

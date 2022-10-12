@@ -1,0 +1,69 @@
+package main;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+public class TratamientoXML {
+
+	public static void main(String[] args) {
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		DocumentBuilder db;
+
+		try {
+			db = dbf.newDocumentBuilder();
+			Document doc = db.newDocument();
+			Element raiz = doc.createElement("libreria");
+			doc.appendChild(raiz);
+			Element libros = doc.createElement("libros");
+			raiz.appendChild(libros);
+			Element libro1 = TratamientoXML.crearLibro(doc, "1234567890", "Don Quijote de la Mancha", "Miguel de Cervantes");
+			libros.appendChild(libro1);
+			Element libro2 = TratamientoXML.crearLibro(doc, "2345678901", "Lazarillo de Tormes", "Anónimo");
+			libros.appendChild(libro2);
+			Element libro3 = TratamientoXML.crearLibro(doc, "4567890123", "La vida es sueño", "Pedro Calderón de la Barca");
+			libros.appendChild(libro3);
+		} catch (ParserConfigurationException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Crea un elemento para el doc.
+	 * @param doc
+	 * @param isbn
+	 * @param autor
+	 * @param titulo
+	 * @return
+	 */
+	private static Element crearLibro(Document doc, String isbn, String aut, String tit) {
+		Element lib = doc.createElement("libro");
+		lib.setAttribute("isbn", isbn);
+		
+		Element autor = doc.createElement("autor");
+		autor.setTextContent(aut);
+		lib.appendChild(autor);
+		
+		Element titulo = doc.createElement("titulo");
+		titulo.setTextContent(tit);
+		lib.appendChild(titulo);
+		
+		return lib;
+	}
+	
+	private static void recorrerMostrar(Document doc) {
+		TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(output);
+
+        transformer.transform(source, result);
+	}
+}
