@@ -200,6 +200,6 @@ public class TratamientoXML {
 		// Se busca al elemento en la posición deseada
 		Element elem = (Element)nl.item(pos - 1);
 		// Se borra su atributo elegido
-		elem.removeAttribute(atr);;
+		elem.removeAttribute(atr);
 	}
 }
