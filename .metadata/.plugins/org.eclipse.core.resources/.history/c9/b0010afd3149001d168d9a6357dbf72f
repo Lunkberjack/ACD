@@ -1,4 +1,0 @@
-module TrabajarConArchivos {
-	requires javax.xml.parsers.DocumentBuilder;
-	requires javax.xml.parsers.DocumentBuilderFactory;
-}

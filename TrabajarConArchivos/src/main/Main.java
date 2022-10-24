@@ -74,7 +74,7 @@ public class Main {
 	public static void listarRecursivo(File carp, String sep) {
 		File[] carpetas = carp.listFiles();
 		// Si y solo si hay algún fichero en el directorio, entra al bucle
-	    if(carpetas != null){
+	    if (carpetas != null){
 	        for (int x = 0; x < carpetas.length; x++) {
 	            System.out.println(sep + carpetas[x].getName());
 	            if (carpetas[x].isDirectory()) {
