@@ -13,16 +13,34 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+/**
+ * Clase con todas las operaciones que se pueden realizar sobre nuestro 
+ * XML videojuegos.xml, implementando un menú desde el cual acceder a
+ * cada una de las funciones.
+ * 
+ * @author Alejandro Reyes, Lucía León
+ * @version 1.0
+ */
 public class Main {
 	public static void main(String[] args) throws JAXBException, IOException {
 		File doc = new File("videojuegos.xml");
+		File doc2 = new File("videojuegos2.xml");
 		leer(doc);
-		Videojuego videojuego = new Videojuego(7,"si","12-6-12","ola", "ke pasa");
-		anadirVideojuego(doc, videojuego);
-		Main.modificarElemento(doc, 2, "titulo", "Dark souls 2 el mejor DS");
-		Main.modificarElemento(doc, 4, "fechalanzamiento", "nomacuerdo cuando salio");
+		// Usamos el documento 2 para que las modificaciones no se sobreescriban
+		Main.anadirVideojuego(doc, new Videojuego(7,"Sonic Frontiers","200algo","ola", "ke pasa"));
+		Main.modificarElemento(doc2, 2, "titulo", "Dark souls 2 el mejor DS");
+		Main.modificarElemento(doc2, 4, "fechalanzamiento", "nomacuerdo cuando salio");
+		Main.modificarElemento(doc2, 6, "resenia", "HOY ESTAMOS AQUÍ REUNIDOS PARA");
 	}
-
+	
+	/**
+	 * Muestra un menú que contiene todas las operaciones posibles a realizar
+	 * sobre el XML.
+	 * 
+	 * @param doc
+	 * @throws JAXBException
+	 * @throws IOException
+	 */
 	public static void mostrarMenu(File doc) throws JAXBException, IOException {
 		Scanner scan = new Scanner(System.in);
 		String respuesta;
@@ -55,7 +73,13 @@ public class Main {
 		scan.close();
 	}
 
-
+	/**
+	 * Lee la información del documento XML que se le indica, con formato
+	 * personalizado.
+	 * 
+	 * @param doc
+	 * @throws JAXBException
+	 */
 	public static void leer(File doc) throws JAXBException {
 		JAXBContext context = JAXBContext.newInstance(Videojuegos.class);
 		Unmarshaller unmarshaller = context.createUnmarshaller();
@@ -64,10 +88,19 @@ public class Main {
 
 		for (Videojuego v : listaVideojuegos) {
 			System.out.println(
-					"El gueim " + v.getId() + " se llama " + v.getTitulo() + " y es de género " + v.getGenero());
+					"Videojuego " + v.getId() + ":\n\tTítulo: " + v.getTitulo() + "\n\tGénero(s): " + v.getGenero() +
+					"\n\tReseña: " + v.getResenia());
 		}
 	}
 
+	/**
+	 * Añade un nuevo elemento <videojuego> al XML.
+	 * 
+	 * @param doc
+	 * @param vj
+	 * @throws JAXBException
+	 * @throws IOException
+	 */
 	public static void anadirVideojuego(File doc, Videojuego vj) throws JAXBException, IOException {
 		JAXBContext context = JAXBContext.newInstance(Videojuegos.class);
 		Unmarshaller unmarshaller = context.createUnmarshaller();
@@ -84,13 +117,25 @@ public class Main {
 		marshaller.marshal(vjs, new FileWriter("videojuegos2.xml",StandardCharsets.UTF_8));
 	}
 
+	/**
+	 * Permite modificar cualquier videojuego en el XML, pasando su id.
+	 * También se debe pasar el nombre del elemento a modificar (may. o mín, es indiferente)
+	 * y el nuevo valor que se le quiere asignar.
+	 * 
+	 * @param doc
+	 * @param id - El id del videojuego a modificar.
+	 * @param elem - El elemento a modificar (título, género, reseña...)
+	 * @param valor - El valor que debe tomar el elemento que se está modificando.
+	 * @throws JAXBException
+	 * @throws IOException
+	 */
 	public static void modificarElemento(File doc, int id, String elem, String valor) throws JAXBException, IOException {
 		JAXBContext context = JAXBContext.newInstance(Videojuegos.class);
 		Unmarshaller unmarshaller = context.createUnmarshaller();
 		Videojuegos vjs = (Videojuegos) unmarshaller.unmarshal(doc);
 		ArrayList<Videojuego> listaVideojuegos = vjs.getVideojuegos();
 		Iterator<Videojuego> it = listaVideojuegos.iterator();
-		boolean encontrado = false;
+		boolean encontrado = false; // Para que, una vez se encuentre el id, se detenga.
 
 		while(encontrado == false) {
 			Videojuego aux = it.next();
@@ -99,7 +144,8 @@ public class Main {
 				// Para que ignore las mayúsculas o minúsculas 
 				// de los parámetros.
 				String auxString = elem.toUpperCase();
-				
+				// Actuamos en función de esta nueva String en 
+				// mayúsculas.
 				switch(auxString) {
 				case "TITULO":
 					aux.setTitulo(valor);
@@ -123,7 +169,6 @@ public class Main {
 			marshaller.setProperty(Marshaller.JAXB_FRAGMENT, false);
 
 			marshaller.marshal(vjs, new FileWriter("videojuegos2.xml",StandardCharsets.UTF_8));
-			
 		}
 	}
 }

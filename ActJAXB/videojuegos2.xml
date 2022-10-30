@@ -2,44 +2,62 @@
 <videojuegos>
     <videojuego id="0">
         <titulo>Demon's Souls</titulo>
-        <fecha_lanzamiento>17</fecha_lanzamiento>
-        <genero>rpg</genero>
-        <resenia>si</resenia>
+        <fecha_lanzamiento>5 de febrero de 2009</fecha_lanzamiento>
+        <genero>rpg, acción, aventura, fantasía oscura</genero>
+        <resenia>Tremendo el primer juego de FromSoftware, la verdad que no implementa del todo bien las mecánicas de los Soulsborne pero eh, disfrutable cuanto menos, 15/10 would recommend.</resenia>
     </videojuego>
     <videojuego id="1">
         <titulo>Dark Souls</titulo>
-        <fecha_lanzamiento>17</fecha_lanzamiento>
-        <genero>rpgito</genero>
-        <resenia>si</resenia>
+        <fecha_lanzamiento>22 de septiembre de 2011</fecha_lanzamiento>
+        <genero>rpg, acción, aventura, fantasía oscura</genero>
+        <resenia>Maravilloso, un muy buen souls para ser el primero, bonito, buena música, personajes carismáticos y una historia digna de un PLIN PLIN PLON, maravilloso.</resenia>
     </videojuego>
     <videojuego id="2">
-        <titulo>Dark Souls II</titulo>
-        <fecha_lanzamiento>17</fecha_lanzamiento>
-        <genero>rp2</genero>
-        <resenia>si</resenia>
+        <titulo>Dark souls 2 el mejor DS</titulo>
+        <fecha_lanzamiento>11 de marzo de 2014</fecha_lanzamiento>
+        <genero>rpg, acción, aventura, fantasía oscura</genero>
+        <resenia>La oveja negra de su saga, odiado por muchos, y querido por otros muchos, en lugar de hacer caso a la opinión pública y descartarlo, es mejor darle un try, quien sabe, lo mismo te acaba gustando.</resenia>
     </videojuego>
     <videojuego id="3">
         <titulo>Bloodborne</titulo>
-        <fecha_lanzamiento>17</fecha_lanzamiento>
-        <genero>pito</genero>
-        <resenia>si</resenia>
+        <fecha_lanzamiento>24 de marzo de 2015</fecha_lanzamiento>
+        <genero>rpg, acción, aventura, fantasía oscura, survival horror</genero>
+        <resenia>Para muchísima gente, el mejor juego de la saga Soulsborne, irónicamente desarrollado a la par que el menos favorito, Dark Souls II, un tanto diferente a la fórmula original pero igual de disfrutable, increíble juego la verdad. Saquen el remaster de PC.</resenia>
     </videojuego>
     <videojuego id="4">
         <titulo>Dark Souls III</titulo>
         <fecha_lanzamiento>nomacuerdo cuando salio</fecha_lanzamiento>
-        <genero>aaa</genero>
-        <resenia>si</resenia>
+        <genero>rpg, acción, aventura, fantasía oscura</genero>
+        <resenia>Otro buen juego sacado el 24 de marzo, en fin, qué menos, el Dark Souls mas consistente de la franquicia, con mecánicas muy bien implementadas, una historia tremendísima y unos DLCs para beber vino y decir; "Joder, definitivamente esto es cine".</resenia>
     </videojuego>
     <videojuego id="5">
-        <titulo>Sekiro</titulo>
-        <fecha_lanzamiento>17</fecha_lanzamiento>
-        <genero>B)</genero>
-        <resenia>si</resenia>
+        <titulo>Sekiro: Shadows Die Twice</titulo>
+        <fecha_lanzamiento>21 de marzo de 2019</fecha_lanzamiento>
+        <genero>rpg, acción, aventura, ambientación japonesa</genero>
+        <resenia>Este juego de FromSoftware es totalmente distinto mecánicamente en cuanto a Soulsborne se refiere, llegando directamente a no considerarse un Soulsborne, aún así es increíble lo divertido que es dominar el simple sistema de combate, otro juego de FromSoftware que es una obra maestra, en fin Miyazaki, un capo, te queremos.</resenia>
     </videojuego>
     <videojuego id="6">
         <titulo>Elden Ring</titulo>
-        <fecha_lanzamiento>17</fecha_lanzamiento>
-        <genero>si</genero>
-        <resenia>si</resenia>
+        <fecha_lanzamiento>25 de febrero de 2022</fecha_lanzamiento>
+        <genero>rpg, acción, aventura</genero>
+        <resenia>HOY ESTAMOS AQUÍ REUNIDOS PARA</resenia>
+    </videojuego>
+    <videojuego id="7">
+        <titulo>Hollow Knight</titulo>
+        <fecha_lanzamiento>24 de febrero de 2017</fecha_lanzamiento>
+        <genero>rpg, aventura, metroidvania</genero>
+        <resenia>No hay palabras para describir el cariño con el que se ha hecho este juego, artwork para llorar de lo bonito que es, una banda sonora que es digna de tener en tu casa, ahí en una sala a parte en vinilo con luces y velas, para rezarle vamos, la historia no es nada del otro mundo, y aún así la forma de contarla y vivirla te hace meterte muchísimo en el mundo, unas mecánicas de juego impecables y un sistema de combate que me recuerda lo bonita que es la vida.</resenia>
+    </videojuego>
+    <videojuego id="8">
+        <titulo>Blasphemous</titulo>
+        <fecha_lanzamiento>10 de septiembre de 2019</fecha_lanzamiento>
+        <genero>rpg, aventura, metroidvania, fantasía oscura, religioso</genero>
+        <resenia>Este videojuego está inspirado en la dificultad y ambientación general de los Souls, dándonos un metroidvania en 2D con un combate increíble, un lore e historia profundos y una ambientación inspirada en la religión. Definitivamente es una experiencia.</resenia>
+    </videojuego>
+    <videojuego id="7">
+        <titulo>Sonic Frontiers</titulo>
+        <fecha_lanzamiento>200algo</fecha_lanzamiento>
+        <genero>ola</genero>
+        <resenia>ke pasa</resenia>
     </videojuego>
 </videojuegos>
