@@ -4,7 +4,14 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-
+/**
+ * Clase que representa al elemento <videojuego> del XML.
+ * Incluye anotaciones para permitir el mapping de JAXB y 
+ * el paso de XML a objeto java y viceversa.
+ * 
+ * @author Alejandro Reyes, Lucía León
+ * @version 1.0
+ */
 @XmlRootElement(name="videojuego")
 @XmlType(propOrder= {"titulo","fechaLanzamiento","genero", "resenia"})
 public class Videojuego {
