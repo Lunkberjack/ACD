@@ -60,4 +60,10 @@
         <genero>ola</genero>
         <resenia>ke pasa</resenia>
     </videojuego>
+    <videojuego id="666">
+        <titulo></titulo>
+        <fecha_lanzamiento>Sonic Algo</fecha_lanzamiento>
+        <genero>si</genero>
+        <resenia>pues un Sonic así que el Alejandro estará posiblemente babeando la carátula</resenia>
+    </videojuego>
 </videojuegos>

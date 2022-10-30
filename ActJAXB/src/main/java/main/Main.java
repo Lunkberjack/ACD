@@ -26,11 +26,14 @@ public class Main {
 		File doc = new File("videojuegos.xml");
 		File doc2 = new File("videojuegos2.xml");
 		leer(doc);
+				
 		// Usamos el documento 2 para que las modificaciones no se sobreescriban
-		Main.anadirVideojuego(doc, new Videojuego(7,"Sonic Frontiers","200algo","ola", "ke pasa"));
-		Main.modificarElemento(doc2, 2, "titulo", "Dark souls 2 el mejor DS");
-		Main.modificarElemento(doc2, 4, "fechalanzamiento", "nomacuerdo cuando salio");
-		Main.modificarElemento(doc2, 6, "resenia", "HOY ESTAMOS AQUÍ REUNIDOS PARA");
+		Main.mostrarMenu(doc2);
+
+//		Main.anadirVideojuego(doc, new Videojuego(7,"Sonic Frontiers","200algo","ola", "ke pasa"));
+//		Main.modificarElemento(doc2, 2, "titulo", "Dark souls 2 el mejor DS");
+//		Main.modificarElemento(doc2, 4, "fechalanzamiento", "nomacuerdo cuando salio");
+//		Main.modificarElemento(doc2, 6, "resenia", "HOY ESTAMOS AQUÍ REUNIDOS PARA");
 	}
 	
 	/**
@@ -61,7 +64,16 @@ public class Main {
 				break;
 			case "2":
 				System.out.println("Introduce el id del juego:");
-				Main.anadirVideojuego(doc, new Videojuego());
+				int idAux = scan.nextInt();
+				System.out.println("Introduce el título:");
+				String titAux = scan.nextLine();
+				System.out.println("Introduce la fecha de lanzamiento:");
+				String fechAux = scan.nextLine();
+				System.out.println("Introduce el género, o géneros:");
+				String genAux = scan.nextLine();
+				System.out.println("Introduce la reseña:");
+				String resAux = scan.nextLine();
+				Main.anadirVideojuego(doc, new Videojuego(idAux, titAux, fechAux, genAux, resAux));
 				break;
 			case "3":
 				break;
