@@ -1,4 +1,4 @@
-package main;
+package principal;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -30,8 +30,8 @@ public class Main {
 		// Usamos el documento 2 para que las modificaciones no se sobreescriban.
 		Main.anadirVideojuego(doc, new Videojuego(9,"Sonic y el Caballero Negro","3 de marzo de 2009","Hack and slash, rpg, aventura, acción, plataformas", "No es, ni mucho menos, el mejor de todos los Sonics que existen, es uno de los más criticados, pero son los mismos que se quejan de Dark Souls II, dadle un try y dominad las mecánicas, que no os cuesta, tiene una historia tremenda y la banda sonora es maravillosa, viva el rock."));
 		Main.anadirVideojuego(doc2, new Videojuego(10,"Sonic Riders: Zero Gravity","8 de enero de 2008","carreras, deportes", "Juego muy infravalorado, para ser un Spin-off, es bastante divertido y consistente, introduce personajes carismáticos y una historia decente, la banda sonora es, una vez más, su punto más fuerte, arte."));
-		Main.anadirVideojuego(doc2, new Videojuego(11,"The Legend of Zelda - Twilight Princess","19 de noviembre de 2006","acción-aventura", "El más oscuro de los Zeldas, pero un rayo de luz en tu vida si te decides a jugarlo. Mi infancia entera. Me casaría con sus mecánicas, con su historia."));
-		Main.anadirVideojuego(doc2, new Videojuego(12,"Dragon Quest IX - Centinelas del Firmamento","11 de julio de 2009","jrpg", "La razón de que esté estudiando este ciclo. Una inspiración real para querer diseñar videojuegos. ¿Cómo un mundo abierto en Nintendo puede calar tan hondo?"));
+		Main.anadirVideojuego(doc2, new Videojuego(11,"The Legend of Zelda - Twilight Princess","19 de noviembre de 2006","acción-aventura", "El más oscuro de los Zeldas, pero un rayo de luz en tu vida si te decides a jugarlo. Mi infancia entera. Quién no se casaría con sus mecánicas, con su historia (con Midna)."));
+		Main.anadirVideojuego(doc2, new Videojuego(12,"Dragon Quest IX - Centinelas del Firmamento","11 de julio de 2009","jrpg", "Una inspiración real para conocer el mundo del diseño de videojuegos. ¿Cómo un mundo abierto en Nintendo puede calar tan hondo?"));
 
 		Main.mostrarMenu(doc2);
 	}
