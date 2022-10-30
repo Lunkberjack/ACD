@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<videojuegos>
+	<videojuego id="0">
+		<titulo>Demon's Souls</titulo>
+		<fecha_lanzamiento>17</fecha_lanzamiento>
+		<genero>rpg</genero>
+		<resenia>si</resenia>
+	</videojuego>
+	<videojuego id="1">
+		<titulo>Dark Souls</titulo>
+		<fecha_lanzamiento>17</fecha_lanzamiento>
+		<genero>rpgito</genero>
+		<resenia>si</resenia>
+	</videojuego>
+	<videojuego id="2">
+		<titulo>Dark Souls II</titulo>
+		<fecha_lanzamiento>17</fecha_lanzamiento>
+		<genero>rp2</genero>
+		<resenia>si</resenia>
+	</videojuego>
+	<videojuego id="3">
+		<titulo>Bloodborne</titulo>
+		<fecha_lanzamiento>17</fecha_lanzamiento>
+		<genero>pito</genero>
+		<resenia>si</resenia>
+	</videojuego>
+	<videojuego id="4">
+		<titulo>Dark Souls III</titulo>
+		<fecha_lanzamiento>17</fecha_lanzamiento>
+		<genero>aaa</genero>
+		<resenia>si</resenia>
+	</videojuego>
+	<videojuego id="5">
+		<titulo>Sekiro</titulo>
+		<fecha_lanzamiento>17</fecha_lanzamiento>
+		<genero>B)</genero>
+		<resenia>si</resenia>
+	</videojuego>
+	<videojuego id="6">
+		<titulo>Elden Ring</titulo>
+		<fecha_lanzamiento>17</fecha_lanzamiento>
+		<genero>si</genero>
+		<resenia>si</resenia>
+	</videojuego>
+</videojuegos>
