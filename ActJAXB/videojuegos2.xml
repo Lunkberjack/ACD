@@ -66,4 +66,16 @@
         <genero>carreras, deportes</genero>
         <resenia>Juego muy infravalorado, para ser un Spin-off, es bastante divertido y consistente, introduce personajes carismáticos y una historia decente, la banda sonora es, una vez más, su punto más fuerte, arte.</resenia>
     </videojuego>
+    <videojuego id="11">
+        <titulo>The Legend of Zelda - Twilight Princess</titulo>
+        <fecha_lanzamiento>19 de noviembre de 2006</fecha_lanzamiento>
+        <genero>acción-aventura</genero>
+        <resenia>El más oscuro de los Zeldas, pero un rayo de luz en tu vida si te decides a jugarlo. Quién no se casaría con sus mecánicas, con su historia, con Midna quizás.</resenia>
+    </videojuego>
+    <videojuego id="12">
+        <titulo>Dragon Quest IX - Centinelas del Firmamento</titulo>
+        <fecha_lanzamiento>11 de julio de 2009</fecha_lanzamiento>
+        <genero>jrpg</genero>
+        <resenia>Una inspiración real para descubrir mundo del diseño de videojuegos, al menos en mi caso. ¿Cómo un mundo abierto en Nintendo puede calar tan hondo?</resenia>
+    </videojuego>
 </videojuegos>
